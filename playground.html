@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<textarea id="myTextarea" rows="4" cols="50"></textarea>
+<textarea id="myTextarea" rows="4" cols="50">I have a cat, a dog, and a goat :: data-highlight :: goat :: test :: data-highlight-colour="yellow" ::  data-highlight-colour="red" :: data-highlight-colour="green"</textarea>
 
 <!-- <p id="demo">Visit Microsoft!</p> -->
 
@@ -34,7 +34,7 @@ function myFunction() {
 
    		// data-highlight-colour="yellow":"BRRAAAAAP"
 	};
-	var res = str.replace(/data-highlight-colour="yellow"|data-highlight-colour="red"|data-highlight-colour="green"|data-highlight-colour="blue"|data-highlight-colour="grey"/gi, function(matched){
+	var res = str.replace(/cat|dog|goat|data-highlight-colour="yellow"|data-highlight-colour="red"|data-highlight-colour="green"|data-highlight-colour="blue"|data-highlight-colour="grey"/gi, function(matched){
 			return mapObj[matched];
 		});
 	document.getElementById("myTextarea").value = res; //7:18 PM`

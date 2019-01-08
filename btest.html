@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>1. Paste Confluence code in left box
+<br>
+2. Click on the "Go" button
+<br>
+3. Copy the code from the right box
+<br>
+4. Paste into Confluence</p>
+<textarea id="myTextarea" rows="25" cols="50"></textarea>
+
+<textarea id="myTextarea2" rows="25" cols="50"></textarea>
+
+<button onclick="myFunction()">Go</button>
+
+<script>
+function myFunction() {
+	var str = document.getElementById("myTextarea").value; //7:17 PM`
+	console.log(str);
+	var mapObj = {
+   		'data\-highlight\-colour="yellow"':'style="background-color: rgb(249,231,159);"',
+   		'data\-highlight\-colour="red"':'style="background-color: rgb(245,183,177);"',
+   		'data\-highlight\-colour="green"':'style="background-color: rgb(171,235,198);"',
+   		'data\-highlight\-colour="blue"':'style="background-color: rgb(174,214,241);"',
+   		'data\-highlight\-colour="grey"':'style="background-color: rgb(247,247,247);"',
+	};
+	var res = str.replace(/data-highlight-colour="yellow"|data-highlight-colour="red"|data-highlight-colour="green"|data-highlight-colour="blue"|data-highlight-colour="grey"/gi, function(matched){
+			return mapObj[matched];
+		});
+	document.getElementById("myTextarea2").value = res; //7:18 PM`
+}
+</script>
+
+</body>
+</html>
